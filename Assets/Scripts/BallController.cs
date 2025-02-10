@@ -9,6 +9,8 @@ public class BallController : MonoBehaviour
     public Rigidbody sphereRigidbody;
     private Rigidbody ballRB;
 
+    private bool isBallLaunched;
+
     void Start()
     {
         // Grabbing a reference to RigidBody
@@ -22,6 +24,8 @@ public class BallController : MonoBehaviour
 
     private void LaunchBall()
     {
+        if (isBallLaunched) return;
+        isBallLaunched = true;
         ballRB.AddForce(transform.forward * force, ForceMode.Impulse);
     }
 }
