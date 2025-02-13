@@ -12,7 +12,7 @@ public class Gutter : MonoBehaviour
             ballRigidBody.linearVelocity = Vector3.zero;
             ballRigidBody.angularVelocity = Vector3.zero;
 
-            ballRigidBody.AddForce(transform.forward * velocityMagnitude, ForceMode.VelocityChange);
+            ballRigidBody.AddForce(transform.up * velocityMagnitude, ForceMode.VelocityChange);
         }
 
 
